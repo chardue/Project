@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 5 - CSS3</title>
+    <link rel="stylesheet" href="/CSS/lecture.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Lecture 5: CSS3</h1>
+
+    <h2>Introduction to CSS3</h2>
+    <ul>
+        <li>Originated from SGML in the 1980s.</li>
+        <li>Aims to separate structure from presentation.</li>
+        <li>CSS Level 1 was released in 1996 by W3C, CSS Level 2 in 1998, and CSS3 is modular.</li>
+        <li>Over 50 modules published by the W3C’s CSS Working Group.</li>
+        <li>CSS3 is backward compatible with CSS 2.1.</li>
+    </ul>
+
+    <h2>CSS Solved a Big Problem</h2>
+    <ul>
+        <li>HTML was not meant to include formatting tags.</li>
+        <li>CSS removes styling from HTML, simplifying large website management.</li>
+    </ul>
+
+    <h2>CSS Syntax and Selectors</h2>
+    <ul>
+        <li>A CSS rule-set includes a selector and a declaration block.</li>
+        <li>Selectors target elements; declarations define style.</li>
+        <li>Declarations end with semicolons and are inside curly braces.</li>
+    </ul>
+
+    <h3>Element Selector</h3>
+        <pre>p {
+        text-align: center;
+        color: red;
+        }
+        </pre>
+
+    <h3>ID Selector</h3>
+    <pre>
+        #para1 {
+        text-align: center;
+        color: red;
+        }
+    </pre>
+
+    <h3>Class Selector</h3>
+    <pre>.center {
+    text-align: center;
+    color: red;
+}</pre>
+
+    <h3>Grouping Selectors</h3>
+    <pre>h1, h2, p {
+    text-align: center;
+    color: red;
+}</pre>
+
+    <h3>CSS Comments</h3>
+    <pre>/* This is a comment */
+/* This is
+a multi-line
+comment */</pre>
+
+    <h2>Three Ways to Insert CSS</h2>
+    <ul>
+        <li>External Style Sheet (linked in &lt;head&gt;)</li>
+        <pre>&lt;link rel="stylesheet" href="mystyle.css"&gt;</pre>
+        <li>Internal Style Sheet</li>
+        <pre>&lt;style&gt;
+body {
+    background-color: linen;
+}
+&lt;/style&gt;</pre>
+        <li>Inline Style</li>
+        <pre>&lt;h1 style="color:blue;margin-left:30px;"&gt;Heading&lt;/h1&gt;</pre>
+    </ul>
+
+    <h2>Cascading Order (Priority)</h2>
+    <ol>
+        <li>Inline style</li>
+        <li>Internal style sheet</li>
+        <li>External style sheet</li>
+        <li>User-defined styles</li>
+        <li>Browser defaults</li>
+    </ol>
+
+    <h2>CSS Colors</h2>
+    <ul>
+        <li>Background Color: <code>&lt;h1 style="background-color:DodgerBlue;"&gt;</code></li>
+        <li>Text Color: <code>&lt;h1 style="color:Tomato;"&gt;</code></li>
+        <li>Border Color: <code>&lt;h1 style="border:2px solid DodgerBlue;"&gt;</code></li>
+    </ul>
+
+    <h3>Color Values</h3>
+    <ul>
+        <li>RGB: <code>rgb(255, 0, 0)</code></li>
+        <li>HEX: <code>#ff0000</code></li>
+        <li>HSL: <code>hsl(0, 100%, 50%)</code></li>
+        <li>RGBA: <code>rgba(255, 0, 0, 0.5)</code></li>
+        <li>HSLA: <code>hsla(0, 100%, 50%, 0.5)</code></li>
+    </ul>
+
+    <h2>CSS Backgrounds</h2>
+    <pre>body {
+    background-image: url("img_tree.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}</pre>
+    <p>Shorthand:</p>
+    <pre>body {
+    background: #ffffff url("img_tree.png") no-repeat right top;
+}</pre>
+
+    <h2>CSS Borders</h2>
+    <pre>p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}</pre>
+
+    <h3>Border Width and Color</h3>
+    <pre>p {
+    border-width: thick;
+    border-color: red;
+}</pre>
+
+    <h3>Individual Sides</h3>
+    <pre>p {
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+}</pre>
+
+    <h3>Shorthand Border</h3>
+    <pre>p {
+    border: 5px solid red;
+}</pre>
+
+    <h3>Left and Bottom Borders</h3>
+    <pre>p {
+    border-left: 6px solid red;
+    background-color: lightgrey;
+}
+
+p {
+    border-bottom: 6px solid red;
+    background-color: lightgrey;
+}</pre>
+
+    <h3>Rounded Borders</h3>
+    <pre>p {
+    border: 2px solid red;
+    border-radius: 5px;
+}</pre>
+
+    <h2>CSS Height and Width</h2>
+    <ul>
+        <li>Default is <code>auto</code></li>
+        <li>Can use px, cm, %, etc.</li>
+    </ul>
+
+    <h3>Max Width</h3>
+    <pre>div {
+    max-width: 500px;
+}</pre>
+
+    <h2>References</h2>
+    <ul>
+        <li>Carey, P. (2018). <em>New Perspectives on HTML5, CSS3, and Javascript</em></li>
+        <li>Jenkins, S. (2013). <em>Web Design All-in-One for Dummies</em></li>
+        <li>Parker, J. (2021). <em>HTML for Beginners</em></li>
+        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+        <li>Sklar, J. (2012). <em>Web Design Principles</em></li>
+        <li>Castro, E., & Hyslop, B. (2013). <em>HTML and CSS: Visual QuickStart Guide</em></li>
+    </ul>
+
+</div>
+
+</body>
+</html>

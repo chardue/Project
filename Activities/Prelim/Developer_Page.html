@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Developer Page</title>
+    <style>
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: auto;
+        padding: auto;
+        background: #0d1b2a;
+        color: #ffffff;
+    }
+
+    /* Navigation Bar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 80px;
+        background: #242449;
+    }
+
+    .nav-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #e0e1dd;
+        font-size: 18px;
+    }
+
+    nav ul li a:hover {
+        color: #778da9;
+    }
+
+    /* Hero Section */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100vh;
+        text-align: center;
+        background: #0f1f30;
+    }
+
+    .image-content img {
+        width: 520px;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .hero-content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+        color: #ffffff;
+    }
+
+    .hero-content span {
+        color: #78a1bb;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+        font-weight: normal;
+        color: #375f72;
+    }
+
+    /* About Section */
+    #about {
+        background-color: white;
+        padding: 80px 90px;
+        color: black;
+    }
+
+    #about h1 {
+        color: #084786;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .about-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+
+    .about-image {
+        padding-right: 50px;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 480px;
+        height: 410px;
+        border-radius: 15px;
+    }
+
+    .about-text {
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    .about-text h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+        color: #0d1b2a;
+    }
+
+    .about-text p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    /* Skills Section */
+    #skills {
+        padding: 80px 20px;
+        text-align: center;
+        background: #1b263b;
+    }
+
+    #skills h2 {
+        font-size: 32px;
+        color: #ffffff;
+        margin-bottom: 40px;
+    }
+
+    .skills-container {
+        display: grid;
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .skill {
+        background: #415a77;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: left;
+        color: #ffffff;
+    }
+
+    /* Contact Section */
+    #contact {
+        padding: 80px 20px;
+        background: #ffffff;
+        text-align: center;
+    }
+
+    #contact h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #084786;
+    }
+
+    .contact-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin: 40px auto;
+        max-width: 1000px;
+    }
+
+    .contact-card {
+        background: #ebebebde;
+        padding: 20px;
+        border-radius: 40px;
+        text-align: center;
+    }
+
+    .contact-card .icon {
+        font-size: 36px;
+        color: #084786;
+        margin-bottom: 10px;
+    }
+
+    .contact-card h3 {
+        font-size: 18px;
+        color: #084786;
+        margin-bottom: 5px;
+    }
+
+    .contact-card p {
+        font-size: 16px;
+        color: #333333;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-name">Chard</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="text-content">
+                <h1>Hello, I'm <span>RICHARD E. LIMLINGAN</span></h1>
+                <h2>Major in Computer Science</h2>
+            </div>
+            <div class="image-content">
+                <img src="https://i.ibb.co/mFggNNkP/profile.png" alt="profile">
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://i.ibb.co/vvmz12GN/profile2.jpg" alt="profile2">
+            </div>
+            <div class="about-text">
+                <h2>Hello fellas! I am Richard</h2>
+                <p>I am a 2nd-year student at the University of the East, pursuing a Bachelor of Science in Computer Science. I am dedicated to excelling in my coursework and aspiring to be a skilled software engineer.</p>
+                <p>My hobbies include playing basketball, volleyball, guitar, online games, and making creative web pages. I enjoy the competitive spirit of sports, and music. Additionally, I have a quirky side, and I enjoy creating playful, sometimes nonsensical web pages just for fun—it's my way of combining creativity with coding!</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill"><h3>HTML</h3><p>Creating semantic, accessible HTML.</p></div>
+            <div class="skill"><h3>CSS</h3><p>Designing responsive, visually appealing pages.</p></div>
+            <div class="skill"><h3>C++</h3><p>Strong foundation in modern C++ development.</p></div>
+            <div class="skill"><h3>Python</h3><p>Building dynamic and reusable modules.</p></div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-card"><div class="icon">📍</div><h3>Address</h3><p>Manila, Philippines</p></div>
+            <div class="contact-card"><div class="icon">📞</div><h3>Phone</h3><p>+63999-819-8931</p></div>
+            <div class="contact-card"><div class="icon">✉️</div><h3>Email</h3><p>richqrdlimlingan@gmail.com</p></div>
+            <div class="contact-card"><div class="icon">🌐</div><h3>Website</h3><p>https://github.com/chardue</p></div>
+        </div>
+    </section>
+</body>
+</html>

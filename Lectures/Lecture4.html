@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture - Lists, Links, and Images</title>
+    <link rel="stylesheet" href="/CSS/lecture.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Lists, Links, and Images</h1>
+  <p><strong>CIP1101 Integrative Programming and Technologies 1</strong></p>
+
+  <h2>HTML LISTS</h2>
+  <ul>
+    <li>Making information more accessible is the single most important quality of HTML.</li>
+    <li>It helps you organize your information into documents readers can quickly understand, scan, and extract, possibly with automated browser agents.</li>
+    <li>It shows specific information quickly and clearly.</li>
+  </ul>
+
+  <h3>Types of Lists</h3>
+  <ul>
+    <li>Ordered list <code>&lt;ol&gt;</code></li>
+    <li>Unordered list <code>&lt;ul&gt;</code></li>
+    <li>Definition list <code>&lt;dl&gt;</code></li>
+  </ul>
+
+  <h3>Ordered Lists</h3>
+  <p>Lists in which each item is numbered, usually starting at 1. Useful for ordered or hierarchical items such as instructions.</p>
+  <pre><code>&lt;ol&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+  <h4>With CSS:</h4>
+  <pre>
+    <code>HTML:
+&lt;ol&gt;
+  &lt;li&gt;Notebook&lt;/li&gt;
+  &lt;li&gt;Ballpen&lt;/li&gt;
+  &lt;li&gt;Yellow Paper&lt;/li&gt;
+&lt;/ol&gt;
+
+CSS:
+li {
+  list-style-type: upper-roman;
+}</code>
+</pre>
+
+  <h4>list-style-type Values</h4>
+  <ul>
+    <li><code>decimal</code> – default numbers</li>
+    <li><code>upper-alpha</code> – uppercase letters</li>
+    <li><code>lower-alpha</code> – lowercase letters</li>
+    <li><code>upper-roman</code> – uppercase Roman numerals</li>
+    <li><code>lower-roman</code> – lowercase Roman numerals</li>
+  </ul>
+
+  <h4>Attributes:</h4>
+  <ul>
+    <li><code>type="1"</code> – specify list type</li>
+    <li><code>start="5"</code> – starting point of the list</li>
+  </ul>
+
+  <pre><code>&lt;ol type="A" start="5"&gt;
+  &lt;li&gt;Item&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+  <h3>Unordered Lists</h3>
+  <p>Used to create bulleted lists.</p>
+  <pre><code>&lt;ul style="list-style-type:square"&gt;
+  &lt;li&gt;Notebook&lt;/li&gt;
+  &lt;li&gt;Ballpen&lt;/li&gt;
+  &lt;li&gt;Yellow Paper&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+  <h4>Bullet Types:</h4>
+  <ul>
+    <li><strong>disc</strong> – default bullet</li>
+    <li><strong>circle</strong></li>
+    <li><strong>square</strong></li>
+    <li><strong>none</strong> – no bullets</li>
+  </ul>
+
+  <h3>Description Lists</h3>
+  <pre><code>&lt;dl&gt;
+  &lt;dt&gt;Notebook&lt;/dt&gt;
+  &lt;dd&gt;- a small book with blank or ruled pages for writing notes in.&lt;/dd&gt;
+  &lt;dt&gt;Ballpen&lt;/dt&gt;
+  &lt;dd&gt;- a pen that dispenses ink over a metal ball at its point&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+  <h3>Nested List</h3>
+  <pre><code>&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea
+    &lt;ul&gt;
+      &lt;li&gt;Black tea&lt;/li&gt;
+      &lt;li&gt;Green tea&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+  <h3>Horizontal List with CSS (Navigation Menu)</h3>
+  <p>Insert to &lt;head&gt;:</p>
+  <pre><code>&lt;style&gt;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111111;
+}
+&lt;/style&gt;</code></pre>
+
+  <p>Insert to &lt;body&gt;:</p>
+  <pre><code>&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#news"&gt;News&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+  <h2>HTML Links / Hyperlinks</h2>
+  <p>Links let users jump from one page to another or to a specific location in the current page.</p>
+
+  <h3>Types of href Values</h3>
+  <ul>
+    <li>Absolute URL</li>
+    <li>Relative URL</li>
+    <li>Jump within the current page</li>
+  </ul>
+
+  <pre><code>&lt;a href="home.html"&gt;Back to HOME&lt;/a&gt;</code></pre>
+  <p>Absolute link:</p>
+  <pre><code>&lt;a href="http://google.com"&gt;Google&lt;/a&gt;</code></pre>
+  <p>Relative link:</p>
+  <pre><code>&lt;a href="template.htm"&gt;Template&lt;/a&gt;</code></pre>
+
+  <h3>Internal Link</h3>
+  <pre><code>&lt;a href="#sectionID"&gt;Jump to Section&lt;/a&gt;</code></pre>
+
+  <h3>Link Colors (CSS)</h3>
+  <ul>
+    <li><code>a:link</code> – unvisited link</li>
+    <li><code>a:visited</code> – visited link</li>
+    <li><code>a:hover</code> – mouse hover</li>
+    <li><code>a:active</code> – clicked link</li>
+  </ul>
+
+  <h3>target Attribute</h3>
+  <ul>
+    <li><code>_blank</code> – new tab/window</li>
+    <li><code>_self</code> – same tab (default)</li>
+    <li><code>_parent</code> – parent frame</li>
+    <li><code>_top</code> – top frame</li>
+    <li><code>framename</code> – named frame</li>
+  </ul>
+
+  <pre><code>&lt;a href="https://www.w3schools.com/" target="_blank"&gt;Visit W3Schools!&lt;/a&gt;
+&lt;a href="template.htm" target="_top"&gt;HTML5 tutorial!&lt;/a&gt;</code></pre>
+
+  <h3>Image as Link</h3>
+  <pre><code>&lt;a href="template.htm"&gt;
+  &lt;img src="Rudolph.jpg" alt="rudolph" style="width:42px;height:42px;border:0;"&gt;
+&lt;/a&gt;</code></pre>
+
+  <h2>Images</h2>
+  <h3>Best Web Image Formats</h3>
+  <ul>
+    <li>WebP – replacement for JPEG, PNG, GIF</li>
+    <li>GIF – good for drawings, animations</li>
+    <li>JPEG – best for real photos</li>
+    <li>PNG – combines GIF and JPEG benefits</li>
+  </ul>
+
+  <h3>GIF Features</h3>
+  <ul>
+    <li>Lossless compression</li>
+    <li>Max 256 colors</li>
+    <li>GIF89a supports transparency, animation</li>
+    <li>Interlacing for progressive loading</li>
+  </ul>
+
+  <h3>JPEG Features</h3>
+  <ul>
+    <li>Best for photorealistic images</li>
+    <li>Supports thousands of colors</li>
+  </ul>
+
+  <h3>PNG Features</h3>
+  <ul>
+    <li>Lossless compression</li>
+    <li>Supports alpha transparency and multiple color depths</li>
+  </ul>
+
+</div>
+</body>
+</html>

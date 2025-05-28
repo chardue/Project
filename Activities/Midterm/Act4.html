@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-header {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            flex: 0 0 100px;
+            width: 90px;
+            height: 90px;
+            border: 1px solid #000;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 90px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .title {
+            flex: 1;
+            text-align: center;
+        }
+
+        .title h1 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .title h2 {
+            margin: 20px 0 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .title p {
+            margin: 0;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .program-info {
+            text-align: right;
+            margin: 0 -5px 0 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .program-info input {
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .name-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px 20px;
+        }
+
+        .name-field, .auxiliary-field {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .name-field input, .auxiliary-field input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .name-field label, .auxiliary-field label {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .auxiliary-space {
+            width: 20px;
+            flex-shrink: 0;
+        }
+
+        .form-section {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .form-section h2 {
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            flex: 0 0 15%;
+            font-size: 14px;
+            margin-right: 20px;
+        }
+
+        .form-group input[type="text"] {
+            flex: 1;
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+            font-size: 14px;
+            padding: 5px;
+            outline: none;
+        }
+
+        .checkbox-pair {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .checkbox-group {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .checkbox-group div {
+            margin-bottom: 8px;
+        }
+
+        .checkbox-group input[type="text"] {
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+            outline: none;
+            width: 170px;
+        }
+
+        .inline-fields, .inline-fields2 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .inline-fields label, .inline-fields2 label {
+            font-size: 14px;
+            margin-right: 3px;
+        }
+
+        .inline-fields input[type="text"], .inline-fields2 input[type="text"] {
+            flex: 1;
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+            font-size: 14px;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+
+        .inline-fields2 label {
+            width: 100px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .inline-fields2 h2 {
+            width: 100%;
+            text-align: left;
+            flex: 1;
+        }
+
+        .guardian-info {
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        #blank-name {
+            border-bottom: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-header">
+        <div class="logo">LOGO</div>
+        <div class="title">
+            <h1>SAMPLE UNIVERSITY</h1>
+            <p>ENROLLMENT SYSTEM</p>
+            <h2>PERSONAL DATA SHEET</h2>
+            <p>(Graduate School, Law, Medicine)</p>
+        </div>
+        <div class="program-info">
+            <div>Program: <input type="text" name="program"></div>
+            <br><br><br>
+            <div>Student #: <input type="text" name="student-number"></div>
+        </div>
+    </div>
+
+    <div class="name-section">
+        <div class="name-field">
+            <input type="text" name="surname" placeholder=" ">
+            <label>Surname</label>
+        </div>
+        <div class="name-field">
+            <input type="text" name="given-name" placeholder=" ">
+            <label>Given Name</label>
+        </div>
+        <div class="name-field">
+            <input type="text" name="middle-name" placeholder=" ">
+            <label>Middle Name</label>
+        </div>
+        <div class="auxiliary-space"></div>
+        <div class="auxiliary-field">
+            <input type="text" name="auxiliary" placeholder=" ">
+            <label>Auxiliary Name<br>(Sr, Jr, II, III, etc)</label>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2>Student Details:</h2>
+
+        <div class="form-group">
+            <label for="city-address">City Address:</label>
+            <input type="text" id="city-address" name="city-address">
+        </div>
+
+        <div class="inline-fields">
+            <label for="zip-code">Zip Code:</label>
+            <input type="text" id="zip-code" name="zip-code" class="short-input">
+            <label for="tel-no">Tel. No.:</label>
+            <input type="text" id="tel-no" name="tel-no" class="short-input">
+            <label for="email">E-mail address:</label>
+            <input type="text" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="home-address">Home Address:</label>
+            <input type="text" id="home-address" name="home-address">
+        </div>
+
+        <div class="inline-fields2">
+            <label for="zipcode-2">Zip Code:</label>
+            <input type="text" id="zipcode-2" name="zipcode-2" class="short-input">
+            <label for="region">Region:</label>
+            <input type="text" id="region" name="region" class="short-input">
+        </div>
+
+        <div class="inline-fields2">
+            <label for="birthday">Birthday:</label>
+            <input type="text" id="birthday" name="birthday" class="short-input">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" class="short-input">
+        </div>
+
+        <div class="inline-fields2">
+            <label for="birthplace">Birthplace:</label>
+            <input type="text" id="birthplace" name="birthplace">
+            <label for="religion">Religion:</label>
+            <input type="text" id="religion" name="religion" class="short-input">
+        </div>
+
+        <div class="inline-fields2">
+            <label for="citizenship">Citizenship:</label>
+            <input type="text" id="citizenship" name="citizenship">
+            <label for="sex">Sex:</label>
+            <input type="text" id="sex" name="sex">
+        </div>
+
+        <div class="inline-fields2">
+            <label for="alien">If Alien, ACR #:</label>
+            <input type="text" id="alien" name="alien">
+        </div>
+
+        <div class="checkbox-pair">
+            <div class="checkbox-group">
+                <h2>Legal Status:</h2>
+                <div><input type="checkbox" id="citizen-rp"><label for="citizen-rp">Citizen of RP</label></div>
+                <div><input type="checkbox" id="permanent-resident"><label for="permanent-resident">Permanent Resident</label></div>
+                <div>
+                    <input type="checkbox" id="student-visa">
+                    <label for="student-visa">
+                        Person granted permission to enter and<br>
+                        remain as a student in RP on a visa for<br>
+                        a defined period of time
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="child-spouse-visa">
+                    <label for="child-spouse-visa">
+                        Person granted permission to enter and<br>
+                        remain as a child or spouse of a worker<br>
+                        on a visa for a defined period of time
+                    </label>
+                </div>
+                <div><input type="checkbox" id="other-visa"><label for="other-visa">Other visa</label></div>
+                <div><input type="checkbox" id="legal-unknown"><label for="legal-unknown">Legal status not known</label></div>
+            </div>
+            
+            <div class="checkbox-group">
+                <h2>Civil Status:</h2>
+                <div><input type="checkbox" id="single"><label for="single">Single</label></div>
+                <div><input type="checkbox" id="married"><label for="married">Married</label></div>
+                <div><input type="checkbox" id="divorced"><label for="divorced">Divorced</label></div>
+                <div><input type="checkbox" id="widowed"><label for="widowed">Widowed</label></div>
+                <div><input type="checkbox" id="separated"><label for="separated">Separated</label></div>
+                <br>
+                <div><input type="checkbox" id="working"><label for="working">Working</label></div>
+                <div><input type="checkbox" id="not-working"><label for="not-working">Not working</label></div>
+                <div>
+                    <label id="office-tel" for="office-tel">If working: Office/Bus. Tel. #:</label>
+                    <input type="text" id="office-tel" name="office-tel">
+                </div>
+            </div>
+        </div>
+
+        <div class="guardian-info">
+            <h2>GUARDIAN'S INFORMATION</h2>
+        </div>
+
+        <div class="inline-fields2">
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname">
+            <label class="short-text" for="first-name">Guardian's</label>
+            <input type="text" id="blank-name" name="first-name">
+        </div>
+
+        <div class="inline-fields2">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name">
+            <label for="first-name">Address:</label>
+            <input type="text" id="address-name" name="first-name">
+        </div>
+
+        <div class="inline-fields2">
+            <label for="middle-name">Middle Name:</label>
+            <input type="text" id="middle-name" name="middle-name">
+            <label for="first-name"></label>
+            <input type="text" id="blank-name" name="first-name">
+        </div>
+
+        <div class="inline-fields2">
+            <label for="auxiliary-name">Auxiliary Name:</label>
+            <input type="text" id="auxiliary-name" name="auxiliary-name">
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zip" name="zip">
+        </div>
+        
+        <div class="inline-fields2">
+            <label for="middle-name">Occupation/<br>Employment:</label>
+            <input type="text" id="middle-name" name="middle-name">
+            <label for="first-name"></label>
+            <input type="text" id="blank-name" name="first-name">
+        </div>
+
+        <div class="inline-fields2">
+            <label for="auxiliary-name">Off./Bus, Tel. #:</label>
+            <input type="text" id="auxiliary-name" name="auxiliary-name">
+            <label for="tel">Tel #:</label>
+            <input type="text" id="tel" name="tel">
+        </div>
+    </div>
+
+</body>
+</html>

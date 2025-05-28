@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 6 - HTML Forms and Multimedia</title>
+    <link rel="stylesheet" href="/CSS/lecture.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Lecture 6: Forms and Multimedia</h1>
+
+    <h2>Web Forms</h2>
+    <ul>
+        <li>Allow users to input and submit data.</li>
+        <li>Forms consist of controls (widgets) like text boxes, checkboxes, and buttons.</li>
+    </ul>
+
+    <h2>Form Controls and Widgets</h2>
+    <ul>
+        <li><strong>Controls:</strong> text boxes, radio buttons, checkboxes, text areas, selection lists</li>
+        <li><strong>Widgets:</strong> sliders, spin boxes, date pickers, color pickers</li>
+    </ul>
+
+    <h2>Form Tag & Attributes</h2>
+    <pre>
+&lt;form action="/action_page.php" method="post" target="_blank"&gt;
+    ...form elements...
+&lt;/form&gt;
+    </pre>
+    <p>Common attributes: <code>action</code>, <code>method</code>, <code>target</code>, <code>name</code>, <code>id</code></p>
+
+    <h2>Input Types and Examples</h2>
+    <pre>
+&lt;input type="text" placeholder="Your name"&gt;
+&lt;input type="password"&gt;
+&lt;input type="radio" name="gender" value="male" checked&gt; Male
+&lt;input type="checkbox" name="vehicle" value="Bike"&gt; I have a bike
+&lt;input type="submit" value="Submit"&gt;
+&lt;input type="reset" value="Reset"&gt;
+&lt;input type="button" value="Click Me!" onclick="alert('Hello')"&gt;
+    </pre>
+
+    <h3>Label Example</h3>
+    <pre>
+&lt;label for="fname"&gt;First Name:&lt;/label&gt;
+&lt;input type="text" id="fname" name="fname"&gt;
+    </pre>
+
+    <h2>Advanced Input Types (HTML5)</h2>
+    <ul>
+        <li><code>email</code>, <code>url</code>, <code>tel</code></li>
+        <li><code>date</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>time</code></li>
+        <li><code>color</code>, <code>range</code>, <code>search</code></li>
+    </ul>
+
+    <h3>Color Picker Example</h3>
+    <pre>
+&lt;input type="color" id="favcolor" name="favcolor"&gt;
+    </pre>
+
+    <h2>Input Attributes</h2>
+    <ul>
+        <li><code>value</code>, <code>readonly</code>, <code>disabled</code>, <code>size</code>, <code>maxlength</code></li>
+        <li>HTML5: <code>autocomplete</code>, <code>autofocus</code>, <code>required</code>, <code>placeholder</code>, <code>pattern</code></li>
+    </ul>
+
+    <h3>Form with Autocomplete</h3>
+    <pre>
+&lt;form autocomplete="on"&gt;
+    &lt;input type="text" name="fname"&gt;
+    &lt;input type="email" name="email" autocomplete="off"&gt;
+&lt;/form&gt;
+    </pre>
+
+    <h2>Select Element</h2>
+    <pre>
+&lt;select name="movies"&gt;
+    &lt;option value="Ten" selected&gt;Ten Things I Hate About You&lt;/option&gt;
+    &lt;option value="Fifty"&gt;Fifty First Dates&lt;/option&gt;
+&lt;/select&gt;
+    </pre>
+
+    <h2>Textarea</h2>
+    <pre>
+&lt;textarea id="message" name="message" rows="4" cols="30"&gt;
+The cat was playing in the garden.
+&lt;/textarea&gt;
+    </pre>
+
+    <h2>Fieldset and Legend</h2>
+    <pre>
+&lt;fieldset&gt;
+    &lt;legend&gt;Personal Info&lt;/legend&gt;
+    &lt;input type="text" name="fname" value="Nicole"&gt;
+&lt;/fieldset&gt;
+    </pre>
+
+    <h2>Creating Effective Forms</h2>
+    <ul>
+        <li>Adjust field sizes for input clarity</li>
+        <li>Group fields logically with <code>&lt;fieldset&gt;</code></li>
+        <li>Use input types wisely (radio, checkbox, select)</li>
+        <li>Use labels for accessibility</li>
+    </ul>
+
+    <h2>Multimedia Elements</h2>
+    <h3>Audio</h3>
+    <pre>
+&lt;audio controls&gt;
+    &lt;source src="sound.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+    </pre>
+
+    <h3>Video</h3>
+    <pre>
+&lt;video width="320" height="240" controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+    </pre>
+
+    <h3>Autoplay Video</h3>
+    <pre>
+&lt;video width="320" height="240" autoplay&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+    </pre>
+
+    <h2>Embedding Plug-ins</h2>
+    <h3>Using &lt;object&gt;</h3>
+    <pre>
+&lt;object width="400" height="200" data="file.swf"&gt;&lt;/object&gt;
+    </pre>
+    <h3>Using &lt;embed&gt;</h3>
+    <pre>
+&lt;embed width="400" height="50" src="file.swf"&gt;
+    </pre>
+
+    <h2>References</h2>
+    <ul>
+        <li>Dean, J. (2018). <em>Web Programming with HTML5, CSS, and JavaScript</em></li>
+        <li>Castro, E., & Hyslop, B. (2013). <em>HTML and CSS: Visual QuickStart Guide</em></li>
+        <li>Carey. P (2018). <em>New Perspectives on HTML5, CSS3, and Javascript</em></li>
+        <li>Parker, J. (2021). <em>HTML for Beginners</em></li>
+        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+        <li>Sklar, J. (2012). <em>Web Design Principles</em></li>
+        <li>Plumley, G. (2011). <em>Website Design and Development</em></li>
+    </ul>
+
+</div>
+
+
+
+</body>
+</html>

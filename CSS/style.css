@@ -1,0 +1,105 @@
+@keyframes mainfadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  max-width: 100%;
+  overflow-x: auto; /* Enables horizontal scroll */
+  padding: 1rem;
+  opacity: 0;
+  animation: mainfadeIn 0.8s ease forwards;
+  animation-delay: 0.3s;
+  margin-left: 40px;
+  margin-right: 40px;
+  height: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive grid behavior */
+.lecture-grid {
+  display: flex;
+  flex-wrap: nowrap; /* Horizontal scroll on large screens */
+  gap: 1.5rem;
+}
+
+/* Optional media query: allow wrapping on smaller devices */
+@media (max-width: 768px) {
+  .lecture-grid {
+    flex-wrap: wrap; /* Stack cards on small screens */
+    justify-content: center;
+  }
+
+  .lecture-card {
+    width: 90%; /* Make card full width on small screens */
+    margin-bottom: 1rem;
+  }
+
+  .main {
+    overflow-x: hidden; /* Disable horizontal scroll on small screens */
+  }
+}
+
+
+.lecture-card {
+  flex: 0 0 auto;
+  width: clamp(280px, 40vw, 550px); /* Flexible width */
+  background-color: transparent;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  text-align: center;
+  padding: 0.9rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+}
+
+
+.lecture-card:hover {
+  transform: scale(1.05);
+  background-color: rgba(43, 33, 100, 0.075);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.lecture-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.lecture-card p {
+  color: antiquewhite;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.main::-webkit-scrollbar {
+  height: 10px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+.modal-content {
+  border-radius: 15px;
+  border: 1px solid #fff;
+}
+
+.modal-footer .btn {
+  min-width: 120px;
+}

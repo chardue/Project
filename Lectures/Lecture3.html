@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 3 - Lists and Tables</title>
+    <link rel="stylesheet" href="/CSS/lecture.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Lecture 3: Lists and Tables</h1>
+
+  <h2>HTML Styles</h2>
+  <p>The <code>style</code> attribute adds styles to elements, such as color, font, and size:</p>
+  <pre>&lt;tagname style="property:value;"&gt;</pre>
+
+  <h3>Background Color</h3>
+  <pre>&lt;body style="background-color:DarkTurquoise;"&gt;</pre>
+  <pre>&lt;h1 style="background-color:cyan;"&gt;This is a heading&lt;/h1&gt;</pre>
+  <pre>&lt;p style="background-color:tomato;"&gt;This is a paragraph.&lt;/p&gt;</pre>
+
+  <h3>Text Color</h3>
+  <pre>&lt;h1 style="color:red;"&gt;This is a heading&lt;/h1&gt;</pre>
+  <pre>&lt;p style="color:blue;"&gt;This is a paragraph.&lt;/p&gt;</pre>
+
+  <h3>Fonts</h3>
+  <pre>&lt;h1 style="font-family:verdana;"&gt;This is a heading&lt;/h1&gt;</pre>
+  <pre>&lt;p style="font-family:courier;"&gt;This is a paragraph.&lt;/p&gt;</pre>
+
+  <h3>Text Size</h3>
+  <pre>&lt;h1 style="font-size:300%;"&gt;This is a heading&lt;/h1&gt;</pre>
+  <pre>&lt;p style="font-size:30pt;"&gt;This is a paragraph.&lt;/p&gt;</pre>
+
+  <h3>Text Alignment</h3>
+  <pre>&lt;h1 style="text-align:center;"&gt;Centered Heading&lt;/h1&gt;</pre>
+  <pre>&lt;p style="text-align:center;"&gt;Centered paragraph.&lt;/p&gt;</pre>
+
+  <h2>HTML Tables</h2>
+  <p>Use the <code>&lt;table&gt;</code> tag to define tables. Each row uses <code>&lt;tr&gt;</code>, headers use <code>&lt;th&gt;</code>, and data cells use <code>&lt;td&gt;</code>.</p>
+
+  <h3>Basic Table Example</h3>
+  <pre>
+    &lt;table style="width:100%"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Firstname&lt;/th&gt;
+        &lt;th&gt;Lastname&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Nicole&lt;/td&gt;
+        &lt;td&gt;Pascual&lt;/td&gt;
+        &lt;td&gt;18&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Allen&lt;/td&gt;
+        &lt;td&gt;Ramirez&lt;/td&gt;
+        &lt;td&gt;18&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
+  </pre>
+
+  <h3>Styling Tables</h3>
+  <ul>
+    <li><strong>Border:</strong> <code>border: 1px solid black;</code></li>
+    <li><strong>Collapse Borders:</strong> <code>border-collapse: collapse;</code></li>
+    <li><strong>Cell Padding:</strong> <code>padding: 15px;</code></li>
+    <li><strong>Text Alignment:</strong> <code>text-align: left;</code></li>
+    <li><strong>Border Spacing:</strong> <code>border-spacing: 5px;</code></li>
+  </ul>
+
+  <h3>Colspan Example</h3>
+  <pre>
+    &lt;table style="width:100%"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Company Name&lt;/th&gt;
+        &lt;th colspan="2"&gt;Telephone&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;The Travel Club&lt;/td&gt;
+        &lt;td&gt;(02) 332-7183&lt;/td&gt;
+        &lt;td&gt;(02) 815-7418&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
+  </pre>
+
+  <h3>Rowspan Example</h3>
+  <pre>
+    &lt;table style="width:100%"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Company Name:&lt;/th&gt;
+        &lt;td&gt;The Travel Club&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th rowspan="2"&gt;Telephone:&lt;/th&gt;
+        &lt;td&gt;(02) 332-7183&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;(02) 815-7418&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
+  </pre>
+
+  <h2>References</h2>
+  <ul>
+    <li>Jenkins, S. (2013). Web Design All-in-One for Dummies.</li>
+    <li>Parker, J. (2021). HTML for Beginners.</li>
+    <li>W3Schools - <a href="https://www.w3schools.com/" target="_blank">https://www.w3schools.com/</a></li>
+    <li>Sklar, J. (2012). Web Design Principles.</li>
+    <li>Castro & Hyslop. (2013). HTML and CSS: Visual QuickStart Guide.</li>
+  </ul>
+</div>
+
+</body>
+</html>
