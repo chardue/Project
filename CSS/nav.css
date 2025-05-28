@@ -118,12 +118,13 @@ hr {
     text-decoration: none;
   }
 
-  .glow-border {
+.glow-border {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
   transition: 0.3s ease-in-out;
-  }
-  .glow-border:hover {
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
-    transform: scale(1.03);
-  }
+}
+
+.glow-border:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+  transform: scale(1.03);
+}
